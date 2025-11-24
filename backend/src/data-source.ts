@@ -2,7 +2,6 @@ import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import * as dotenv from 'dotenv';
 import { Customer } from './entity/Customer';
-import { DashboardData } from './entity/DashboardData';
 
 dotenv.config();
 
@@ -15,7 +14,7 @@ export const AppDataSource = new DataSource({
   database: process.env.DB_DATABASE,
   synchronize: process.env.NODE_ENV === 'development', // Auto-create tables in development
   logging: process.env.NODE_ENV === 'development',
-  entities: [Customer, DashboardData],
+  entities: [Customer],
   migrations: ['src/migration/**/*.ts'],
   subscribers: [],
   options: {
