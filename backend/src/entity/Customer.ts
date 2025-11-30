@@ -1,7 +1,8 @@
 import {
   Entity,
   PrimaryGeneratedColumn,
-  Column
+  Column,
+  CreateDateColumn
 } from 'typeorm';
 
 @Entity('customers')
@@ -17,4 +18,7 @@ export class Customer {
 
   @Column({ type: 'varchar', length: 255, nullable: true })
   password?: string;
+
+  @CreateDateColumn()
+  createdAt!: Date;
 }

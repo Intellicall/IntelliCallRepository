@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { body, validationResult } from 'express-validator';
 import bcrypt from 'bcrypt';
-import { AppDataSource } from '../data-source';
-import { Customer } from '../entity/Customer';
-import { generateToken } from '../utils/jwt.utils';
+import { AppDataSource } from '../data-source.js';
+import { Customer } from '../entity/Customer.js';
+import { generateToken } from '../utils/jwt.utils.js';
 
 const router = Router();
 

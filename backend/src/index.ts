@@ -4,12 +4,12 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import { AppDataSource } from './data-source';
+import { AppDataSource } from './data-source.js';
 
 // Routes
-import authRoutes from './routes/auth.routes';
-import customerRoutes from './routes/customer.routes';
-import dashboardRoutes from './routes/dashboard.routes';
+import authRoutes from './routes/auth.routes.js';
+import customerRoutes from './routes/customer.routes.js';
+import dashboardRoutes from './routes/dashboard.routes.js';
 
 // Load environment variables
 dotenv.config();

@@ -2,6 +2,7 @@ import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import * as dotenv from 'dotenv';
 import { Customer } from './entity/Customer.js';
+import { DashboardData } from './entity/DashboardData.js';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -19,7 +20,7 @@ export const AppDataSource = new DataSource({
   database: process.env.DB_DATABASE,
   synchronize: process.env.NODE_ENV === 'development', // Auto-create tables in development
   logging: process.env.NODE_ENV === 'development',
-  entities: [Customer],
+  entities: [Customer, DashboardData],
   migrations: ['src/migrations/**/*.ts'],
   subscribers: [],
   options: {

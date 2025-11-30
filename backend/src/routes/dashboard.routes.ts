@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { body, validationResult } from 'express-validator';
-import { AppDataSource } from '../data-source';
-import { DashboardData } from '../entity/DashboardData';
-import { Customer } from '../entity/Customer';
-import { authenticateToken, AuthRequest } from '../middleware/auth.middleware';
+import { AppDataSource } from '../data-source.js';
+import { DashboardData } from '../entity/DashboardData.js';
+import { Customer } from '../entity/Customer.js';
+import { authenticateToken, AuthRequest } from '../middleware/auth.middleware.js';
 
 const router = Router();
 
