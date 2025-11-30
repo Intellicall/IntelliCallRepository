@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import * as dotenv from 'dotenv';
-import { Customer } from './entity/Customer';
+import { Customer } from './entity/Customer.js';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -20,7 +20,7 @@ export const AppDataSource = new DataSource({
   synchronize: process.env.NODE_ENV === 'development', // Auto-create tables in development
   logging: process.env.NODE_ENV === 'development',
   entities: [Customer],
-  migrations: ['src/migration/**/*.ts'],
+  migrations: ['src/migrations/**/*.ts'],
   subscribers: [],
   options: {
     encrypt: true, // Set to true if using Azure SQL
