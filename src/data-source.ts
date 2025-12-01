@@ -20,7 +20,7 @@ export const AppDataSource = new DataSource({
   synchronize: process.env.NODE_ENV === 'development', // Auto-create tables in development
   logging: process.env.NODE_ENV === 'development',
   entities: [CustomerData],
-  migrations: ['dist/migrations/**/*.js'],
+  migrations: ['./src/migrations/**/*.ts'],
   subscribers: [],
   options: {
     encrypt: true, // Set to true if using Azure SQL
