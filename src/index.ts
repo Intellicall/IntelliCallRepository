@@ -10,12 +10,12 @@ import { fileURLToPath } from 'url';
 import { AppDataSource } from './data-source.js';
 
 // API Routes
-import authRoutes from './routes/auth.routes.js';
-import customerRoutes from './routes/customer.routes.js';
-import dashboardRoutes from './routes/dashboard.routes.js';
+import authRoutes from './routes/auth.js';
+import customerRoutes from './routes/customer.js';
+import dashboardRoutes from './routes/dashboard.js';
 
 // Page Routes
-import pageRoutes from './routes/pages/index.routes.js';
+import pageRoutes from './routes/pages/index.js';
 
 // Load environment variables
 dotenv.config();

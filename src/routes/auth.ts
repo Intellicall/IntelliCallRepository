@@ -3,7 +3,7 @@ import { body, validationResult } from 'express-validator';
 import bcrypt from 'bcrypt';
 import { AppDataSource } from '../data-source.js';
 import { CustomerData } from '../entity/CustomerData.js';
-import { generateToken } from '../utils/jwt.utils.js';
+import { generateToken } from '../utils/jwt.js';
 
 const router = Router();
 

@@ -2,7 +2,7 @@ import { Router, Request, Response } from 'express';
 import { body, validationResult } from 'express-validator';
 import { AppDataSource } from '../data-source.js';
 import { CustomerData } from '../entity/CustomerData.js';
-import { authenticateToken, AuthRequest } from '../middleware/auth.middleware.js';
+import { authenticateToken, AuthRequest } from '../middleware/auth.js';
 
 const router = Router();
 

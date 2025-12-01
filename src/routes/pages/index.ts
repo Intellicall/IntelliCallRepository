@@ -2,8 +2,8 @@ import { Router } from 'express';
 import bcrypt from 'bcrypt';
 import { AppDataSource } from '../../data-source.js';
 import { CustomerData } from '../../entity/CustomerData.js';
-import { generateToken } from '../../utils/jwt.utils.js';
-import { authenticatePage, AuthRequest } from '../../middleware/auth.middleware.js';
+import { generateToken } from '../../utils/jwt.js';
+import { authenticatePage, AuthRequest } from '../../middleware/auth.js';
 
 const router = Router();
 
