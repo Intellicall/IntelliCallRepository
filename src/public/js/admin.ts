@@ -9,6 +9,8 @@ interface CustomerFormData {
   name: string;
   email: string;
   password?: string;
+  companyname: string;
+  website: string;
 }
 
 interface ApiResponse {
@@ -33,7 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const data: CustomerFormData = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
-      password: (formData.get('password') as string) || undefined
+      password: (formData.get('password') as string) || undefined,
+      companyname: formData.get('companyname') as string,
+      website: formData.get('website') as string
     };
 
     submitBtn.disabled = true;

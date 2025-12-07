@@ -23,6 +23,15 @@ export class CustomerData {
   @Column({ type: 'text', nullable: true })
   textContent?: string;
 
+  @Column({ type: 'varchar', length: 255, nullable: true })
+  website?: string;
+
+  @Column({ type: 'varchar', length: 255, nullable: true })
+  companyname?: string;
+
+  @Column({ type: 'varchar', length: 255, nullable: true })
+  knowledgeBaseId?: string;
+
   @CreateDateColumn()
   createdAt!: Date;
 
