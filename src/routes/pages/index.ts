@@ -67,7 +67,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/login-as-customer', authenticatePage, async (req: AuthRequest, res) => {
+router.post('/login-as-customer', async (req: AuthRequest, res) => {
   const { customerId } = req.body;
 
   try {
