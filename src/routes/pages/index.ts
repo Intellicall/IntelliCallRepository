@@ -159,4 +159,8 @@ router.get('/privacy', (req, res) => {
   res.render('pages/privacy', { title: 'Privacy Policy' });
 });
 
+router.get('/terms', (req, res) => {
+  res.render('pages/terms', { title: 'Terms of Service' });
+});
+
 export default router;
